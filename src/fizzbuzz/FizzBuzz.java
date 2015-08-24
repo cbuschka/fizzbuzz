@@ -11,14 +11,14 @@ public class FizzBuzz {
 		while (x < 100) {
 			x++;
 
-			if (isDividable(x, 3) && isDividable(x, 5)) {
+			if (isFizzBuzz(x)) {
 				lines.add("fizz&buzz");
 			} else {
 
-				if (isDividable(x, 3)) {
+				if (isFizz(x)) {
 					lines.add("fizz");
 				} else {
-					if (isDividable(x, 5)) {
+					if (isBuzz(x)) {
 						lines.add("buzz");
 					} else {
 						lines.add("" + x);
@@ -28,6 +28,18 @@ public class FizzBuzz {
 		}
 
 		return lines;
+	}
+
+	private boolean isBuzz(int x) {
+		return isDividable(x, 5);
+	}
+
+	private boolean isFizz(int x) {
+		return isDividable(x, 3);
+	}
+
+	private boolean isFizzBuzz(int x) {
+		return isFizz(x) && isBuzz(x);
 	}
 
 	private static boolean isDividable(int a, int divisor) {
