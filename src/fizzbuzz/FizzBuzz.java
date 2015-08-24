@@ -11,20 +11,14 @@ public class FizzBuzz {
 		while (x < 100) {
 			x++;
 
-			if (isFizzBuzz(x)) {
+			if (isFizzBuzz(x))
 				lines.add("fizz&buzz");
-			} else {
-
-				if (isFizz(x)) {
-					lines.add("fizz");
-				} else {
-					if (isBuzz(x)) {
-						lines.add("buzz");
-					} else {
-						lines.add("" + x);
-					}
-				}
-			}
+			else if (isFizz(x))
+				lines.add("fizz");
+			else if (isBuzz(x))
+				lines.add("buzz");
+			else
+				lines.add("" + x);
 		}
 
 		return lines;
