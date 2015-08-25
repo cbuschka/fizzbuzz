@@ -7,9 +7,7 @@ public class FizzBuzz {
 	public List<String> fizzbuzz() {
 		List<String> lines = new ArrayList<>();
 
-		int x = 0;
-		while (x < 100) {
-			x++;
+		for (int x = 1; x < 101; x++) {
 
 			if (isFizzBuzz(x))
 				lines.add("fizz&buzz");
